@@ -1,0 +1,261 @@
+:root{
+  --z-modal: 1000;
+}
+
+@media screen and (min-width: 968px){
+  :root{
+    --normal-font-size: 1rem;
+  }
+}
+
+/* // =================  BASE ==============*/
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+button{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+  background: rgba(255, 228, 228, 0.445);
+  position: relative;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============= Modal ===========*/
+.app_title h1{
+  padding: 3rem 0 1rem 2rem;
+}
+
+.container {
+  margin-left: 1rem; 
+  margin-right: 1rem;
+}
+
+.modal{
+  display: grid;
+  place-items: center;
+
+}
+
+.modal_button{
+  display: inline-block;
+  background-color: rgba(14, 15, 31, 0.89);
+  color: #fff;
+  padding: 1rem 1.25rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.modal_button:hover{
+  background-color: rgba(6, 0, 32, 0.781);
+}
+
+.modal_container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: rgba(32, 32, 32, 0.5); */
+  width: 100%;
+  height: 120vh;
+  display: grid;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: all .3s;
+  z-index: var(--z-modal);
+}
+
+.modal_content{
+  position: relative;
+  background-image: linear-gradient(to top, #dbdee3, #a8afb1b4, #b2b3b3, #b1b9b4, #8e8f8cd8);
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  margin: 0 1rem;
+  border-radius: 1rem 1rem;
+  box-shadow: 2px 2px 5px #000;
+  transition: all .5s;
+
+  /* ====== Effect 1 =======*/
+  transform: translateY(-50%);
+
+  /* ====== Effect 1 =======*/
+  /* transform: scale(.5) translateY(10%); */
+}
+
+.modal_close{
+  display: inline-flex;
+  background-color: rgb(219, 219, 219);
+  border-radius: .25rem;
+  color: rgb(19, 19, 19);
+  padding: .4rem;
+  font-size: 1rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.modal_title{
+  text-transform: capitalize;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.modal_description{
+  margin-bottom: .8rem;
+}
+
+.modal_button-width{
+  width: 75%;
+}
+
+.modal_button-link{
+  display: block;
+  margin: 1rem auto 0;
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.modal_button:nth-child(1) .modal_content{
+  /* transform: translateY(0); */
+
+  /* ====== Effect 1 =======*/
+  transform: scale(1) translateY(0);
+}
+
+@media screen and (min-width: 576px){
+  .modal_content{
+    margin: auto;
+    width: 500px;
+    border-radius: 1.25rem;
+    transform: translateY(-15%);
+  }
+}
+
+input{
+  background: rgba(227, 243, 219, 0.37);
+  color: #272727;
+  font-size: 18px;
+  padding: 10px 5px 10px 15px;
+  margin-bottom: .5rem;
+  margin-left: .7rem;
+  width: 70%;
+  border: none;
+  border-radius: .8rem;
+  border-bottom: solid 1px rgba(201, 31, 31, 0.274);
+}
+
+input:focus{
+  outline: none;
+  color: #1d1d1d;
+}
+
+.form .input-container:nth-child(1) input{
+  width: 34%;
+}
+
+.form .input-container{
+  margin-bottom: 1rem;
+}
+
+.users{
+  width: 100%;
+}
+
+.content-card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.card{
+  background-color: #c0c0c052;
+  width: 250px;
+  height: auto;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: .3rem;
+  box-shadow: 2px 2px 4px rgba(36, 36, 36, 0.74);
+}
+
+.card h4{
+  text-align: center;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-bottom: solid 1px rgba(201, 31, 31, 0.164);
+}
+
+.card .email{
+  padding-top: .7rem;
+  padding-bottom: .7rem;
+}
+
+.card .birthday{
+  padding-top: .7rem;
+  padding-bottom: .7rem;
+  border-bottom: solid 1px rgba(37, 19, 19, 0.068);
+
+}
+
+.card .email p:nth-child(1),
+.birthday p:nth-child(1){
+  font-weight: 600;
+  color: #747272;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: .3rem;
+}
+
+.card .birthday i{
+  margin-right: .5rem;
+}
+
+.card .button{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.card button{
+  border-radius: .5rem;
+}
+
+.card .button i{
+  font-size: 20px;
+  padding: .5rem;
+}
+
+.card .button button:nth-child(1){
+  margin-right: .5rem;
+  background: #a8a1a148;
+  color: #7e7777;
+}
+
+.card .button button:nth-child(1) i:hover{
+  color: #000;
+}
+
+.card .button button:nth-child(2){
+  margin-right: .5rem;
+  background: #a8a1a148;
+  color: #f12525;
+}
